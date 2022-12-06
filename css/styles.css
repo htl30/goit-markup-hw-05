@@ -228,6 +228,27 @@ span.accent:hover {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.close-btn {
+  border: 0;
+  background-color: inherit;
+position: absolute;
+top: 8px;
+right: 8px;
+}
+.close-icon:hover {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-icon {
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 50%;
+border: 1px solid rgba(0, 0, 0, 0.1);
+padding: 6px 0;
+}
+
 /* sections*/
 .title {
   font-weight: 700;
@@ -541,7 +562,7 @@ footer .logo {
 .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
-}
+  }
 
 .btn-container {
   display: flex;
@@ -608,6 +629,7 @@ footer .logo {
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
+  
   /* background-color: teal; */
 }
 
@@ -615,7 +637,7 @@ footer .logo {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
-  /* background-color: tomato; */
+    /* background-color: tomato; */
 }
 
 .flex-element:nth-child(3n) {
@@ -631,7 +653,15 @@ footer .logo {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.flex-element-link:hover,
+.flex-element-link:hover .thumb-flex-container::before {
+transform: translateY(0%)
+}
+
+.flex-element-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .flex-element-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -639,16 +669,19 @@ footer .logo {
 
 .thumb-flex-container {
   position: relative;
+  overflow: hidden;
 }
 
 .thumb-flex-container::before {
   content: ' ';
   width: 370px;
-  height: 294px;
+  height: 295px;
   background-color: rgba(33, 150, 243, 0.9);
   display: inline-block;
   position: absolute;
-  transform: translateY (-294px);
+  transform: translateY(100%);
+  /* opacity: 0; */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-overlay {
@@ -660,6 +693,12 @@ footer .logo {
   letter-spacing: 0.03em;
   padding: 64px 24px;
   color: var(--prim-bcg-color);
+  transform: translateY(100%);
+  /* opacity: 0; */
+}
+
+.flex-element-link:hover .text-overlay{
+  transform: translateY(0);
 }
 
 /* backdrop */
