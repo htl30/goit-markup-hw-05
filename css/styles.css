@@ -231,9 +231,9 @@ span.accent:hover {
 .close-btn {
   border: 0;
   background-color: inherit;
-position: absolute;
-top: 8px;
-right: 8px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
 .close-icon:hover {
   border: 2px solid rgba(0, 0, 0, 0.1);
@@ -243,10 +243,10 @@ right: 8px;
 .close-icon {
   width: 30px;
   height: 30px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 50%;
-border: 1px solid rgba(0, 0, 0, 0.1);
-padding: 6px 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 6px 0;
 }
 
 /* sections*/
@@ -336,7 +336,7 @@ padding: 6px 0;
   width: 370px;
   position: absolute;
   bottom: 0px;
-padding: 27px 0;
+  padding: 27px 0;
 }
 
 .team {
@@ -416,8 +416,9 @@ padding: 27px 0;
   justify-content: center;
   align-items: center;
   color: #afb1b8;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .team-soc-link:hover,
 .team-soc-link:focus {
   color: var(--prim-bcg-color);
@@ -547,7 +548,7 @@ footer .logo {
   align-items: center;
   color: var(--prim-bcg-color);
   background-color: rgba(255, 255, 255, 0.1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
@@ -562,7 +563,7 @@ footer .logo {
 .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
-  }
+}
 
 .btn-container {
   display: flex;
@@ -579,7 +580,6 @@ footer .logo {
   padding: 6px 22px;
   border-radius: 4px;
   border: 1px solid transparent;
-
   background: #f5f4fa;
   font-weight: 500;
   font-size: 16px;
@@ -587,9 +587,7 @@ footer .logo {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .portfolio .btn:first-child {
@@ -629,7 +627,7 @@ footer .logo {
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  
+
   /* background-color: teal; */
 }
 
@@ -637,7 +635,7 @@ footer .logo {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
-    /* background-color: tomato; */
+  /* background-color: tomato; */
 }
 
 .flex-element:nth-child(3n) {
@@ -651,12 +649,11 @@ footer .logo {
 .flex-element-link {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .flex-element-link:hover .thumb-flex-container::before {
-transform: translateY(0%)
+  transform: translateY(0%);
 }
 
 .flex-element-link:hover {
@@ -700,34 +697,35 @@ transform: translateY(0%)
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.flex-element-link:hover .text-overlay{
+.flex-element-link:hover .text-overlay {
   transform: translateY(0);
 }
 
 /* backdrop */
 .backdrop {
-position: fixed;
-top: 0px;
-left:0px;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.backdrop.is-hidden{
-  opacity:0;
+.backdrop.is-hidden {
+  opacity: 0;
   pointer-events: none;
 }
 
 .modal {
-  position:absolute;
- top: 50%;
+  position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-width: 528px;
-height: 581px;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
-background-color: var(--prim-bcg-color);
-transition: transform 2000ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 528px;
+  height: 581px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: var(--prim-bcg-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
